@@ -1,16 +1,12 @@
 # elmadrasah
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A Flutter exam project by elmadrasa.com.
+i made 10 screens in which the user can easily navigate through just as it was shown in the ui example.
+also added an annimation using Lottie in the last screens.
+the texts field are made using a custom text field widget.
+added a custom date calendar package.
+used several reuseable widgets to decrease amount of code written.
+made the first stage of the api and created its functions, classes, files
+used some media query sizes to make the app more interactive on many screen sizes but not all sizes are interactive due to the deadline time
+used bloc,cubit as state managment but is not completly finished due to time.
+added fonts and assets in the root project branch
