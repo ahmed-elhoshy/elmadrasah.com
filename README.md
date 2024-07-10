@@ -11,4 +11,4 @@ used some media query sizes to make the app more interactive on many screen size
 used bloc,cubit as state managment but is not completly finished due to time.
 added fonts and assets in the root project branch
 total development time:20 hrs
-
+https://github.com/ahmed-elhoshy/elmadrasah.com/assets/93227407/5b8eabfb-123b-4817-943d-989f0c512321
