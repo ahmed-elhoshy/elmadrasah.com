@@ -1,0 +1,3 @@
+class SourceResponse {
+  String? id;
+}
