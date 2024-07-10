@@ -10,3 +10,5 @@ made the first stage of the api and created its functions, classes, files
 used some media query sizes to make the app more interactive on many screen sizes but not all sizes are interactive due to the deadline time
 used bloc,cubit as state managment but is not completly finished due to time.
 added fonts and assets in the root project branch
+total development time:20 hr
+
