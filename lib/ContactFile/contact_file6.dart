@@ -23,7 +23,7 @@ class _ContactFileSixState extends State<ContactFileSix> {
         toolbarHeight: 100,
         title: Padding(
           padding:
-              EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.35),
+          EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.35),
           child: Text(
             "المدرسة.كوم",
             style: TextStyle(
@@ -203,10 +203,10 @@ class _ContactFileSixState extends State<ContactFileSix> {
                           width: 150,
                           child: Center(
                               child: Text(
-                            'خصم 15 %',
-                            style: TextStyle(
-                                color: Colors.red, fontWeight: FontWeight.bold),
-                          )),
+                                'خصم 15 %',
+                                style: TextStyle(
+                                    color: Colors.red, fontWeight: FontWeight.bold),
+                              )),
                         ),
                       ),
                       Text(
@@ -228,7 +228,7 @@ class _ContactFileSixState extends State<ContactFileSix> {
                         children: [
                           Padding(
                             padding:
-                                EdgeInsets.only(top: 8.0, right: 5, left: 5),
+                            EdgeInsets.only(top: 8.0, right: 5, left: 5),
                             child: Text(
                               'AED 650',
                               style: TextStyle(
@@ -283,10 +283,10 @@ class _ContactFileSixState extends State<ContactFileSix> {
                           width: 150,
                           child: Center(
                               child: Text(
-                            'خصم 30 %',
-                            style: TextStyle(
-                                color: Colors.red, fontWeight: FontWeight.bold),
-                          )),
+                                'خصم 30 %',
+                                style: TextStyle(
+                                    color: Colors.red, fontWeight: FontWeight.bold),
+                              )),
                         ),
                       ),
                       Text(
@@ -308,7 +308,7 @@ class _ContactFileSixState extends State<ContactFileSix> {
                         children: [
                           Padding(
                             padding:
-                                EdgeInsets.only(top: 8.0, right: 5, left: 5),
+                            EdgeInsets.only(top: 8.0, right: 5, left: 5),
                             child: Text(
                               'AED 800',
                               style: TextStyle(

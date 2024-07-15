@@ -16,7 +16,10 @@ import 'Registeration/registeration2.dart';
 
 void main() {
   initGetIt();
-  runApp(const MyApp());
+  runApp(BlocProvider(
+    create: (context) => MyCubit(getIt(), getIt()),
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -34,8 +37,7 @@ class MyApp extends StatelessWidget {
           ContactFileTwo.routeName: (context) => ContactFileTwo(),
           ContactFileThree.routeName: (context) => ContactFileThree(),
           ContactFileFour.routeName: (context) => ContactFileFour(),
-          ContactFileFive.routeName: (context) => BlocProvider(
-              create: (context) => getIt<MyCubit>(), child: ContactFileFive()),
+          ContactFileFive.routeName: (context) => ContactFileFive(),
           ContactFileSix.routeName: (context) => ContactFileSix(),
           ContactFileSeven.routeName: (context) => ContactFileSeven(),
           ContactFileEight.routeName: (context) => ContactFileEight(),

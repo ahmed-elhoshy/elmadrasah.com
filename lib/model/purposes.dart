@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'days.g.dart';
+part 'purposes.g.dart';
 
 @JsonSerializable()
-class Days {
+class Purposes {
   final int? id;
   @JsonKey(name: 'english_data')
   final String? englishData;
@@ -12,9 +12,10 @@ class Days {
   @JsonKey(name: 'for_data')
   final String? forData;
 
-  Days({this.id, this.englishData, this.arabicData, this.forData});
+  Purposes({this.id, this.englishData, this.arabicData, this.forData});
 
-  factory Days.fromJson(Map<String, dynamic> json) => _$DaysFromJson(json);
+  factory Purposes.fromJson(Map<String, dynamic> json) =>
+      _$PurposesFromJson(json);
 
-  Map<String, dynamic> toJson() => _$DaysToJson(this);
+  Map<String, dynamic> toJson() => _$PurposesToJson(this);
 }

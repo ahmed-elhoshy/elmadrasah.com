@@ -25,7 +25,7 @@ class CustomTextFormField extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         keyboardType:
-            inputType == 'int' ? TextInputType.phone : TextInputType.text,
+        inputType == 'int' ? TextInputType.phone : TextInputType.text,
         validator: validator,
         obscureText: isPassword,
         decoration: InputDecoration(
@@ -33,7 +33,7 @@ class CustomTextFormField extends StatelessWidget {
           hintTextDirection: TextDirection.rtl,
           border: OutlineInputBorder(
             borderSide:
-                BorderSide(color: Theme.of(context).colorScheme.primary),
+            BorderSide(color: Theme.of(context).colorScheme.primary),
           ),
           prefixIcon: Icon(
             icon,

@@ -1,20 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'days.dart';
+part of 'purposes.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Days _$DaysFromJson(Map<String, dynamic> json) => Days(
+Purposes _$PurposesFromJson(Map<String, dynamic> json) => Purposes(
       id: (json['id'] as num?)?.toInt(),
       englishData: json['english_data'] as String?,
       arabicData: json['arabic_data'] as String?,
       forData: json['for_data'] as String?,
     );
 
-Map<String, dynamic> _$DaysToJson(Days instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$PurposesToJson(Purposes instance) => <String, dynamic>{
       'id': instance.id,
       'english_data': instance.englishData,
       'arabic_data': instance.arabicData,

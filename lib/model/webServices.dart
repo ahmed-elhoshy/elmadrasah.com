@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:elmadrasah/model/days.dart';
+import 'package:elmadrasah/model/purposes.dart';
 import 'package:retrofit/http.dart';
 
 part 'webServices.g.dart';
@@ -10,4 +11,7 @@ abstract class Webservices {
 
   @GET('day')
   Future<List<Days>> getAllDays();
+
+  @GET('purpose')
+  Future<List<Purposes>> getAllPurposes();
 }

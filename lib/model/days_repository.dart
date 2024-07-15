@@ -2,10 +2,10 @@ import 'package:elmadrasah/model/webServices.dart';
 
 import 'days.dart';
 
-class Repository {
+class DaysRepository {
   final Webservices webservices;
 
-  Repository(this.webservices);
+  DaysRepository(this.webservices);
 
   Future<List<Days>> getAllDays() async {
     var response = await webservices.getAllDays();

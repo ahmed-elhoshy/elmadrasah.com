@@ -1,9 +1,14 @@
 import 'package:elmadrasah/ContactFile/contact_file3.dart';
 import 'package:elmadrasah/ContactFile/contact_file5.dart';
+import 'package:elmadrasah/model/purposes.dart';
 import 'package:elmadrasah/widgets/custom_option_button.dart';
 import 'package:elmadrasah/widgets/nav_next_button.dart';
 import 'package:elmadrasah/widgets/nav_prev_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../Cubit/my_cubit.dart';
+import '../Cubit/my_states.dart';
 
 class ContactFileFour extends StatefulWidget {
   static const String routeName = 'contactInfoFour';
@@ -15,6 +20,14 @@ class ContactFileFour extends StatefulWidget {
 }
 
 class _ContactFileFourState extends State<ContactFileFour> {
+  List<Purposes> purposesList = [];
+
+  @override
+  void initState() {
+    super.initState();
+    BlocProvider.of<MyCubit>(context).emitGetAllPurposes();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -145,22 +158,40 @@ class _ContactFileFourState extends State<ContactFileFour> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              CustomOptionButton(text: 'حل واجبات'),
-              CustomOptionButton(text: 'تحضير لاختبار'),
+              SizedBox(
+                width: 20,
+              ),
+              BlocBuilder<MyCubit, MyStates>(builder: (context, state) {
+                if (state is GetAllPurposes) {
+                  purposesList = (state).allPurposesList;
+                  return SizedBox(
+                    height: 200,
+                    width: 310,
+                    child: GridView.builder(
+                        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                            maxCrossAxisExtent: 300,
+                            crossAxisSpacing: 0,
+                            mainAxisSpacing: 20,
+                            mainAxisExtent: 80),
+                        physics: NeverScrollableScrollPhysics(),
+                        padding: EdgeInsets.all(0),
+                        shrinkWrap: true,
+                        itemCount: purposesList.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return CustomOptionButton(
+                              text: purposesList[index].arabicData ?? "");
+                        }),
+                  );
+                } else {
+                  return CircularProgressIndicator();
+                }
+              })
+              // CustomOptionButton(text: 'حل واجبات'),
+              // CustomOptionButton(text: 'تحضير لاختبار'),
             ],
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.03,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              CustomOptionButton(text: 'زيادة درجاتي'),
-              CustomOptionButton(text: 'اخري'),
-            ],
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.04,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

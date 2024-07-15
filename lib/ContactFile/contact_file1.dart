@@ -29,7 +29,7 @@ class _ContactFileOneState extends State<ContactFileOne> {
         toolbarHeight: 100,
         title: Padding(
           padding:
-              EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.35),
+          EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.35),
           child: Text(
             "المدرسة.كوم",
             style: TextStyle(
@@ -68,7 +68,7 @@ class _ContactFileOneState extends State<ContactFileOne> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(40),
                               border:
-                                  Border.all(color: Colors.green, width: 4)),
+                              Border.all(color: Colors.green, width: 4)),
                         ),
                         Container(
                           height: 13,
@@ -133,7 +133,7 @@ class _ContactFileOneState extends State<ContactFileOne> {
                       Text(
                         'تاريخ الميلاد',
                         style:
-                            TextStyle(color: Color(0x9E000000), fontSize: 16),
+                        TextStyle(color: Color(0x9E000000), fontSize: 16),
                       ),
                     ],
                   ),
@@ -177,7 +177,7 @@ class _ContactFileOneState extends State<ContactFileOne> {
                         hint: Text(
                           'الجنس',
                           style:
-                              TextStyle(color: Color(0x9E000000), fontSize: 16),
+                          TextStyle(color: Color(0x9E000000), fontSize: 16),
                         ),
                         // Not necessary for Option 1
                         value: _selectedGender,
@@ -229,7 +229,7 @@ class _ContactFileOneState extends State<ContactFileOne> {
                         hint: Text(
                           'الجنسية',
                           style:
-                              TextStyle(color: Color(0x9E000000), fontSize: 16),
+                          TextStyle(color: Color(0x9E000000), fontSize: 16),
                         ),
                         // Not necessary for Option 1
                         value: _selectedGender,

@@ -1,6 +1,7 @@
 import 'package:elmadrasah/Registeration/registeration2.dart';
-import 'package:elmadrasah/widgets/customButton.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/customButton.dart';
 
 class RegistrationScreenOne extends StatefulWidget {
   RegistrationScreenOne({super.key});

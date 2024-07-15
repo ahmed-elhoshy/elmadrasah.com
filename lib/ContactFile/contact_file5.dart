@@ -1,6 +1,7 @@
 import 'package:elmadrasah/ContactFile/contact_file4.dart';
 import 'package:elmadrasah/ContactFile/contact_file6.dart';
 import 'package:elmadrasah/Cubit/my_cubit.dart';
+import 'package:elmadrasah/Cubit/my_states.dart';
 import 'package:elmadrasah/model/days.dart';
 import 'package:elmadrasah/widgets/custom_option_button.dart';
 import 'package:elmadrasah/widgets/nav_next_button.dart';
@@ -124,48 +125,51 @@ class _ContactFileFiveState extends State<ContactFileFive> {
             height: MediaQuery.of(context).size.height * 0.03,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-//               BlocBuilder<MyCubit,MyStates>(
-//                   builder:(context,state){
-//                     if(state is GetAllDays){
-// daysList = (state).allDaysList;
-//   return SizedBox(
-//     height: 100,
-//     width: 350,
-//     child: ListView.builder(
-//       scrollDirection: Axis.horizontal,
-//       shrinkWrap: true,
-//         padding: EdgeInsets.all(8),
-//         itemCount: daysList.length,
-//         itemBuilder:(BuildContext context, int index){
-//           return CustomOptionButton(text: daysList[index].englishData.toString());
-//         }
-//     ),
-//   );
-//
-//                     }else {
-//                       return CircularProgressIndicator();
-//                     }
-//                   }
-//               )
-              CustomOptionButton(text: 'الثلاثاء'),
-              CustomOptionButton(text: 'الاثنين'),
-              CustomOptionButton(text: 'الحد'),
-              CustomOptionButton(text: 'السبت'),
+              BlocBuilder<MyCubit, MyStates>(builder: (context, state) {
+                if (state is GetAllDays) {
+                  daysList = (state).allDaysList;
+                  return SizedBox(
+                    height: 370,
+                    width: 392,
+                    child: GridView.builder(
+// gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,mainAxisSpacing: 30,),
+                        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                          maxCrossAxisExtent: 200,
+                          crossAxisSpacing: 0,
+                          mainAxisSpacing: 30,
+                          mainAxisExtent: 70,
+                        ),
+                        physics: NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        padding: EdgeInsets.only(left: 30, right: 0),
+                        itemCount: daysList.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return CustomOptionButton(
+                              text: daysList[index].arabicData ?? "");
+                        }),
+                  );
+                } else {
+                  return Center(child: CircularProgressIndicator());
+                }
+              })
+              // CustomOptionButton(text: 'الثلاثاء'),
+              // CustomOptionButton(text: 'الاثنين'),
+              // CustomOptionButton(text: 'الحد'),
+              // CustomOptionButton(text: 'السبت'),
             ],
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.03,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              CustomOptionButton(text: 'الجمعة'),
-              CustomOptionButton(text: 'الخميس'),
-              CustomOptionButton(text: 'الاربعاء'),
-            ],
-          ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.end,
+          //   children: [
+          //     CustomOptionButton(text: 'الجمعة'),
+          //     CustomOptionButton(text: 'الخميس'),
+          //     CustomOptionButton(text: 'الاربعاء'),
+          //   ],
+          // ),
           Padding(
             padding: EdgeInsets.only(right: 30.0, top: 30),
             child: Text(

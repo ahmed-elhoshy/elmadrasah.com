@@ -1,3 +1,0 @@
-class SourceResponse {
-  String? id;
-}

@@ -38,7 +38,7 @@ class _ContactFileSevenState extends State<ContactFileSeven> {
         toolbarHeight: 100,
         title: Padding(
           padding:
-              EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.35),
+          EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.35),
           child: Text(
             "المدرسة.كوم",
             style: TextStyle(

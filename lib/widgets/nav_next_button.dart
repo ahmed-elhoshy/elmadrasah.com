@@ -9,7 +9,7 @@ class NavNextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushReplacementNamed(context, action);
+        Navigator.popAndPushNamed(context, action);
       },
       child: Container(
         height: 50,
@@ -20,20 +20,20 @@ class NavNextButton extends StatelessWidget {
         ),
         child: Center(
             child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.navigate_before,
-              color: Colors.white,
-              size: 30,
-            ),
-            Text('التالي',
-                style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
-          ],
-        )),
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.navigate_before,
+                  color: Colors.white,
+                  size: 30,
+                ),
+                Text('التالي',
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white)),
+              ],
+            )),
       ),
     );
   }

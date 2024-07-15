@@ -1,7 +1,7 @@
 import 'package:elmadrasah/ContactFile/contact_file1.dart';
-import 'package:elmadrasah/widgets/customButton.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/customButton.dart';
 import '../widgets/custom_text_field.dart';
 
 class RegistrationScreenTwo extends StatefulWidget {

@@ -23,21 +23,21 @@ class NavPrevButton extends StatelessWidget {
         ),
         child: Center(
             child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('السابق',
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('السابق',
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF009A03),
+                    )),
+                Icon(
+                  Icons.navigate_next,
                   color: Color(0xFF009A03),
-                )),
-            Icon(
-              Icons.navigate_next,
-              color: Color(0xFF009A03),
-              size: 30,
-            ),
-          ],
-        )),
+                  size: 30,
+                ),
+              ],
+            )),
       ),
     );
   }

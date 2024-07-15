@@ -21,15 +21,15 @@ class CustomOptionButton extends StatelessWidget {
         ], borderRadius: BorderRadius.circular(15), color: Colors.white),
         child: Center(
             child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Text(
-            text,
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
+                text,
             style: TextStyle(
-                fontSize: 17,
-                color: Color(0xAB0A0A0A),
-                fontWeight: FontWeight.bold),
-          ),
-        )),
+                    fontSize: 17,
+                    color: Color(0xAB0A0A0A),
+                    fontWeight: FontWeight.bold),
+              ),
+            )),
       ),
     );
   }
